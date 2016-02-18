@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from 'react-dom';
+import "./assets/styling/app.scss";
 
-import MainComponent from "./components/MainComponent.jsx";
+import App from "./components/App.jsx";
 
-ReactDOM.render(<MainComponent />, document.body);
+ReactDOM.render(<App />, document.getElementById("app"));
