@@ -4,8 +4,9 @@
   "description": "Een beginnetje voor nieuwe Reactprojecten",
   "main": "index.js",
   "scripts": {
-    "prepare": "mkdir -p build/ && cp index.html build/ && npm install",
+    "prepare": "mkdir -p build/ && cp index.html build/",
     "dev": "webpack-dev-server --host 0.0.0.0 --hot --progress --colors --content-base build",
+    "predeploy": "mkdir -p build/ && cp index.html build/",
     "deploy": "NODE_ENV=production webpack -p"
   },
   "repository": {
