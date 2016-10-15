@@ -1,9 +1,85 @@
+@import "~susy/sass/susy";
+
+$susy: (
+  flow: ltr,
+  math: fluid,
+  output: float,
+  gutter-position: after,
+  container: auto,
+  container-position: center,
+  columns: 12,
+  gutters: .25,
+  column-width: false,
+  global-box-sizing: border-box,
+  last-flow: to,
+/*  debug: (
+    image: show,
+    color: rgba(#66f, .25),
+    output: background,
+    toggle: top right,
+  ),*/
+  use-custom: (
+    background-image: true,
+    background-options: false,
+    box-sizing: true,
+    clearfix: false,
+    rem: true,
+  )
+);
+
+$susy-inner: (
+  flow: ltr,
+  math: fluid,
+  output: float,
+  gutter-position: split,
+  container: 75%,
+  container-position: center,
+  columns: 12,
+  gutters: .45,
+  column-width: true,
+  global-box-sizing: border-box,
+  last-flow: to,
+/*  debug: (
+    image: show,
+    color: rgba(#26f, .25),
+    output: background,
+    toggle: top right,
+  ),*/
+  use-custom: (
+    background-image: true,
+    background-options: false,
+    box-sizing: true,
+    clearfix: false,
+    rem: true,
+  )
+);
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+@import 'normalize.scss';
 @import 'fonts.scss';
+@import 'settings.scss';
+@import 'menu.scss';
+@import 'list.scss';
+
+
+
 
 body {
-	background: black;
+	background: $background-color;
+	@include container(100%);
 }
-h1 {
-	font-family: SimplisticSans-Bold;
-	color: white;
+#app {
 }
+
+.pagecontainer {
+
+}
+
+

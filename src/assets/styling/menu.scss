@@ -1,0 +1,57 @@
+$marginleft-leftmenu: 15%;
+$marginleft-innermenu: calc(#{$marginleft-leftmenu} + 6%);
+
+$menuheading-color: #706F6F;
+
+.leftmenu {
+	@include span(3 of 12);
+	padding-top: $paddingtop;
+}
+
+.leftmenu__logo {
+	width: 40%;
+	margin-left: $marginleft-leftmenu;
+	margin-bottom: 60px;
+}
+
+.leftmenu__heading {
+	font-family: 'Montserrat-bold';
+	font-size: 14px;
+	color: $menuheading-color;
+	margin-left: $marginleft-innermenu;
+	letter-spacing: .3px;
+	display: inherit;
+}
+
+.leftmenu__padding {
+	margin-top: 10px;
+}
+
+ul.leftmenu__listholder {
+	list-style-type: none;
+	padding-left: $marginleft-innermenu;
+	margin-bottom: 30px;
+}
+
+ul.leftmenu__listholder li {
+	font-family: 'Montserrat-regular';
+	font-size: 14px;
+	margin-top: 10px;
+}
+
+.leftmenu__box {
+	font-family: 'Montserrat-regular';
+	font-size: 12px;
+	color: $ullie-brown;
+	border: 3px solid $ullie-brown;
+	padding: 5px 9px;
+	margin-left: $marginleft-innermenu;
+	margin-bottom: 10px;
+	display: inline-block;
+}
+
+.leftmenu__box:hover{
+	color: white;
+	background-color: $ullie-brown;
+	cursor: pointer;
+}

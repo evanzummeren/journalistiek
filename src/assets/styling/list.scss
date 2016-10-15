@@ -1,0 +1,51 @@
+.list {
+  @include span(last 9);
+  @include container($susy-inner);
+	padding-top: $paddingtop;
+}
+
+.list__shownweek {
+	font-family: Montserrat-regular;
+	margin-top: 11px;
+	display: block;
+}
+
+.headingbox {
+  width: 360px;
+  height: 360px;
+  background: $ullie-brown;
+  margin: 0;
+  padding: 0;
+  display: block;
+	position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -10;
+}
+
+h1.headingbox__heading {
+	font-family: Montserrat-bold;
+	color: #000;
+	width: 250px;
+	font-size: 32px;
+  margin-left: -60px;
+  margin-top: $paddingtop;
+}
+
+.singleboxcontainer {
+  @include span(4 of $susy-inner);
+}
+
+.singlebox {
+  width: 100%;
+  height: 400px;
+  padding: 30px;
+  padding-top: 125px;
+  background: #3C3C3B;
+  .singlebox__heading {
+    font-family: Didot;
+    color: white;
+    font-size: 22px;
+  }
+}
+
