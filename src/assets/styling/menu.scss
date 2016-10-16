@@ -3,6 +3,7 @@ $marginleft-innermenu: calc(#{$marginleft-leftmenu} + 6%);
 
 $menuheading-color: #706F6F;
 
+/* Left menu */
 .leftmenu {
 	@include span(3 of 12);
 	padding-top: $paddingtop;
@@ -54,4 +55,19 @@ ul.leftmenu__listholder li {
 	color: white;
 	background-color: $ullie-brown;
 	cursor: pointer;
+}
+
+/* Topbar */
+.topbar {
+	position: absolute;
+	right: 22px;
+	top: 8px;
+  font-family: Montserrat-regular;
+  font-size: 14px;
+  text-transform: lowercase;
+}
+
+.topbar li {
+	float: left;
+	padding-left: 8px;
 }

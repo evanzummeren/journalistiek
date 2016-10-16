@@ -9,7 +9,9 @@ class SingleboxContainer extends React.Component{
 
 		return (
 			<div style={divStyle} className="singlebox">
-				<h2 className="singlebox__heading">{this.props.heading}</h2>
+				<span className="singlebox__website">NYTIMES.COM</span>
+				<h2 className="singlebox__heading" data-text={this.props.heading}>{this.props.heading}</h2>
+
 			</div>
 		)
 	}

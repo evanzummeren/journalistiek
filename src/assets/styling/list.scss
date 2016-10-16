@@ -46,6 +46,88 @@ h1.headingbox__heading {
     font-family: Didot;
     color: white;
     font-size: 22px;
+    position:relative;
+    width:100%;
+    margin:0 auto;
+  }
+  .singlebox__website {
+    font-family: Montserrat-regular;
+    font-size: 12px;
+    color: #706F6F;
+    margin-bottom: 3px;
   }
 }
 
+
+
+/*@import "compass/css3";*/
+
+
+/*.glitch{
+  color:white;
+  font-size:30px;
+  position:relative;
+  width:400px;
+  margin:0 auto;
+}*/
+@keyframes noise-anim{
+  $steps:20;
+  @for $i from 0 through $steps{
+    $top:random(60);
+    $bottom:random(60);
+    #{percentage($i*(1/$steps))}{
+      clip:rect(#{$top}px,9999px,#{$bottom}px,0);
+      opacity:1;
+    }
+    #{percentage(($i*(1/$steps))+0.0498)}{
+      opacity:1;
+    }
+    #{percentage(($i*(1/$steps))+0.0499)}{
+      clip:rect(#{$top}px,9999px,#{$bottom}px,0);
+      opacity:0;
+    }
+  }
+}
+.singlebox:hover > .singlebox__heading:after{
+  content:attr(data-text);
+  position:absolute;
+  left:2px;
+  text-shadow:1px 0 blue;
+  top:0;
+  color:white;
+background: #3C3C3B;
+  overflow:hidden;
+  clip:rect(0,900px,0,0); 
+  animation:noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2{
+  $steps:20;
+  @for $i from 0 through $steps{
+    $top:random(50);
+    $bottom:random(50);
+    #{percentage($i*(1/$steps))}{
+      clip:rect(#{$top}px,9999px,#{$bottom}px,0);
+      opacity:1;
+    }
+    #{percentage(($i*(1/$steps))+0.0498)}{
+      opacity:1;
+    }
+    #{percentage(($i*(1/$steps))+0.0499)}{
+      clip:rect(#{$top}px,9999px,#{$bottom}px,0);
+      opacity:0;
+    }
+  }
+}
+.singlebox:hover > .singlebox__heading:before{
+  content:attr(data-text);
+  position:absolute;
+  left:-2px;
+  text-shadow:1px 0 blue; 
+  top:0;
+  color:white;
+background: #3C3C3B;
+  overflow:hidden;
+  clip:rect(0,900px,0,0); 
+  animation:noise-anim-2 3s infinite linear alternate-reverse;
+}

@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var createHistory = require('history').createBrowserHistory;
 
 var babelSettings = {
 	presets: ['react', 'es2015']
@@ -9,6 +10,9 @@ var config = {
   output: {
     path: './build',
     filename: "bundle.js"
+  },
+  devServer: {
+    historyApiFallback: true
   },
 
   module: {
