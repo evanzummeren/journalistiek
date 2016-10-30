@@ -1,1 +1,1 @@
-# Ullie.io frontend
+# Journalistieke dingetjes
